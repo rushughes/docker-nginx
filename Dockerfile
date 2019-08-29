@@ -1,6 +1,6 @@
-FROM nginx:latest
+FROM nginx:alpine
 
-COPY    nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 RUN	mkdir /var/run/php-fpm /var/www /var/www/html
 RUN	chown www-data: /var/run/php-fpm
 
